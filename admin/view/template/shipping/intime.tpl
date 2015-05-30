@@ -101,6 +101,20 @@
               <td><input type="text" name="intime_pod_payment_type" value="<?php echo $intime_pod_payment_type; ?>" size="5" /></td>
             </tr>
             <tr>
+              <td><?php echo $entry_date_offset; ?></td>
+              <td>
+                <select name="intime_date_offset">
+                  <?php for ($i = 1; $i <= 31; $i++) { ?>
+                    <?php if ($intime_date_offset == $i) { ?>
+                      <option value="<?php echo $i; ?>" selected="selected"><?php echo $i; ?></option>
+                    <?php } else { ?>
+                      <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php } ?>
+                  <?php } ?>
+                </select>
+              </td>
+            </tr>
+            <tr>
               <td colspan="2"><strong><?php echo $entry_common_info; ?></strong></td>
             </tr>
             <tr>

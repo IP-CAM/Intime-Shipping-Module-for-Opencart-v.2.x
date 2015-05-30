@@ -131,6 +131,12 @@ class ControllerShippingIntime extends Controller {
             $this->data['intime_pod_payment_type'] = $this->config->get('intime_pod_payment_type');
         }
 
+        if (isset($this->request->post['intime_date_offset'])) {
+            $this->data['intime_date_offset'] = $this->request->post['intime_date_offset'];
+        } else {
+            $this->data['intime_date_offset'] = $this->config->get('intime_date_offset');
+        }
+
         if (isset($this->request->post['intime_geo_zone_id'])) {
             $this->data['intime_geo_zone_id'] = $this->request->post['intime_geo_zone_id'];
         } else {
