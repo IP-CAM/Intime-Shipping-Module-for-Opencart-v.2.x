@@ -69,7 +69,7 @@ final class IntimeDatabase {
         $telephone) {
 
         $this->db->query("INSERT INTO `" . DB_PREFIX . "intime_warehouse` SET
-        `code` = '" . (int) $code . "',
+        `code` = '" . $this->db->escape($code) . "',
         `liter_code` = '" . $this->db->escape($liter_code) . "',
         `language_id` = '" . (int)$this->config->get('config_language_id') . "',
         `warehouse_number_in_city` = '" . (int) $warehouse_number_in_city . "',
